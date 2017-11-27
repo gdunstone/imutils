@@ -121,7 +121,9 @@ def _detect_template(img: np.array, template: np.array,
     return results
 
 
-def _detect_card_auto(path: str, probable_card_pos: tuple = tuple(), image_array: np.array = None) -> np.array:
+def _detect_card_auto(path: str,
+        probable_card_pos: tuple = tuple(),
+        image_array: np.array = None) -> np.array:
     card = card_grayscale.copy()
     default_card_h = 100
     height_card, width_card = card.shape[:2]
